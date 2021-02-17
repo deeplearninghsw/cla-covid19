@@ -33,6 +33,6 @@ In case of anaconda, use the following command:
 * DaySeriesCovidDataSetAgegroup.csv
 * FirstdayCovidDataSet.csv 
 
-To generate the datasets run covid_*.py files available in Code/covid_*.py
+To generate the datasets run covid_\*.py files available in Code/covid_\*.py
 
-Once the Dataset is ready(The avialble datset must be updated as the RKI_covid19.csv contains updated information), run the network_*.py files to train the model with data set. The results will be avialble as plots of different districts.
+Once the Dataset is ready(The avialble datset must be updated as the RKI_covid19.csv contains updated information), run the network_\*.py files to train the model with data set. The results will be avialble as plots of different districts.
