@@ -36,10 +36,10 @@ def main():
     features = features.values
     
     model = keras.models.Sequential()
-    # model.add(keras.layers.Dropout(0.2,input_shape=(5,)))
-    model.add(keras.layers.Dense(100,activation=None,input_dim=6,kernel_initializer='normal',kernel_constraint=max_norm(5)))
+    
+    model.add(keras.layers.Dense(100,activation='elu',input_dim=6,kernel_initializer='normal',kernel_constraint=max_norm(5)))
     # model.add(keras.layers.BatchNormalization())
-    # model.add(keras.layers.Dropout(0.5))
+    # model.add(keras.layers.Dropout(0.2))
     model.add(keras.layers.Dense(100,activation='elu',kernel_initializer='normal',kernel_constraint=max_norm(5)))
     model.add(keras.layers.Dense(100,activation='elu',kernel_initializer='normal',kernel_constraint=max_norm(5)))
     model.add(keras.layers.Dense(100,activation='elu',kernel_initializer='normal',kernel_constraint=max_norm(5)))

@@ -45,7 +45,7 @@ def main():
 
     model = keras.models.Sequential()
     model.add(keras.Input(shape=(5,)))
-    model.add(keras.layers.Dense(50,activation=None))
+    model.add(keras.layers.Dense(50,activation='elu'))
     model.add(keras.layers.Dense(50,activation='elu'))
     model.add(keras.layers.Dense(50,activation='elu'))
     model.add(keras.layers.Dense(50,activation='elu'))

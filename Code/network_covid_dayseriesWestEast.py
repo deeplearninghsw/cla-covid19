@@ -99,8 +99,8 @@ def main():
     testtarget = testtarget.values
     
     model = keras.models.Sequential()
-    # model.add(keras.layers.Dropout(0.2,input_shape=(6,)))
-    model.add(keras.layers.Dense(50,activation=None,input_dim=7,kernel_initializer='normal',kernel_constraint=max_norm(5)))
+    
+    model.add(keras.layers.Dense(50,activation='elu',input_dim=7,kernel_initializer='normal',kernel_constraint=max_norm(5)))
     for i in range(0,15):
         model.add(keras.layers.Dense(50,activation='elu',kernel_initializer='normal',kernel_constraint=max_norm(5)))
         # model.add(keras.layers.BatchNormalization())

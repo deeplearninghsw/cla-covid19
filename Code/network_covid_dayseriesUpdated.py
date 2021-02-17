@@ -51,8 +51,8 @@ def pltcolor(lst):
 def main():
     
     lastday=364 #125/129
-    # df=pd.read_csv('../DatasetsDaySeriesCovidDataSetAgegroup.csv')
-    df=pd.read_csv('../DatasetsDaySeriesCovidDataSet.csv')
+    # df=pd.read_csv('../Datasets/DaySeriesCovidDataSetAgegroup.csv')
+    df=pd.read_csv('../Datasets/DaySeriesCovidDataSet.csv')
     # df = df.sample(frac=1).reset_index(drop=True)
     # target = df[['Total_Deaths','west(0)/east(1)']]
     df=df.drop(['Cases_Per_Million','Area','Avg_Age','Std_dev'],axis=1)
@@ -99,8 +99,8 @@ def main():
     testtarget = testtarget.values
     
     model = keras.models.Sequential()
-    # model.add(keras.layers.Dropout(0.2,input_shape=(6,)))
-    model.add(keras.layers.Dense(50,activation=None,input_dim=7,kernel_initializer='normal',kernel_constraint=max_norm(5)))
+    
+    model.add(keras.layers.Dense(50,activation='elu',input_dim=7,kernel_initializer='normal',kernel_constraint=max_norm(5)))
     for i in range(0,10):
         model.add(keras.layers.Dense(50,activation='elu',kernel_initializer='normal',kernel_constraint=max_norm(5)))
         # model.add(keras.layers.BatchNormalization())
